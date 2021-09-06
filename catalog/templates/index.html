@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Домашняя страница библиотеки</h1>
+
+  <p>Добро пожаловать в <em>LocalLibrary</em>. Здесь вы найдете для себя книги, или не найдете</p>
+
+<h2>Краткая информация</h2>
+
+  <p>Вот что у нас есть</p>
+  <ul>
+    <li><strong>Количество книг:</strong> {{ num_books }}</li>
+    <li><strong>Количество копий:</strong> {{ num_instances }}</li>
+    <li><strong>Книг доступно:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+    <li><strong>Жанры:</strong> {{ num_genres }}</li>
+    <li><strong>Книги Булгакова:</strong> {{ num_bulgakov_books }}</li>
+  </ul>
+
+  <p>Вы посещали эту страницу {{ num_visits }} раз.</p>
+
+{% endblock %}
