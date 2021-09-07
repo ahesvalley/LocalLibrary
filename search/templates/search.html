@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block content %}
+    <h1>Поиск</h1>
+    {% if author_lists %}
+        {% for author in author_lists %}
+            <article>
+                <a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{author.last_name}}, 
+                    ({{ author.date_of_birth }}-{{ author.date_of_death }})
+            </article>
+        {% endfor %}
+        {% bootstrap_pagination author_lists url=last_question %}
+    {% else %}
+        <p>Не найдено авторов по вашему запросу<br>Попробуйте повторить запрос с другой формулировкой</p>
+    {% endif %}
+{% endblock %}
