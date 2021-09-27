@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1> {{ author.first_name }} {{author.last_name}}</h1>
+<div class='author_detail'>
+  <h1 class='name'> {{ author.first_name }} {{author.last_name}}</h1>
+
 
   <p><strong>Родился:</strong> {{ author.date_of_birth }}</p>
   <p><strong>Умер:</strong> {{ author.date_of_death }}</p>
- 
-  <div style="margin-left:20px;margin-top:20px">
+</div>
+  <div>
     <h4><strong>Книги</strong></h4>
     {% for book in author.book_set.all %}
+  </div>
+    <div class='author_detail book'>
     <p><strong><a href="{{ book.get_absolute_url }}">{{ book }}</a></strong></p>
     <p>{{ book.summary }}</p>
-    
+    </div>
     {% endfor %}
-  </div>
   {% if perms.catalog.can_see_borrowers %}
   <p><a href="{{author.get_absolute_url}}/update/">Изменить автора</a>
     <a href="{{author.get_absolute_url}}/delete/">Удалить автора</a></p> 

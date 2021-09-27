@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+
     <h1>Список авторов</h1>
 
     {% if author_list %}
     <ul>
 
       {% for author in author_list %}
+      <div class='author_list'>
       <li>
         <a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{author.last_name}}, 
             ({{ author.date_of_birth }}-{{ author.date_of_death }}) 
         </a>
       </li>
+      </div>
       {% endfor %}
 
     </ul>

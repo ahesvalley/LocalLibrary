@@ -1,5 +1,38 @@
 .sidebar-nav {
     margin-top: 20px;
-    padding: 0;
+    margin-bottom: 20px;
+    padding: 10px;
     list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(240, 214, 240);
+    border-radius: 10%;
+} 
+
+.author_list {
+    background-color: rgb(223, 243, 236);
+    background-size: cover;
+    width: 70vh;
+    box-shadow: 4px 4px 5px rgba(34, 8, 8, 0.4);
+    font-size: 15px;
+
+}
+
+.author_detail {
+    background-color:#e5d7c2;
+    background-position: center;
+    background-size: cover;
+    width: 60vh;
+    box-shadow: 4px 4px 5px rgba(34, 8, 8, 0.4);
+    padding: 10px;
+    margin-top: 10vh;
+    color: rgb(112, 105, 36);
+}
+
+.name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.book {
+    background-color:whitesmoke;
+    margin-top:20px;
 }
